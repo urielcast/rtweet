@@ -1,8 +1,14 @@
-install.packages("rtweet", dependencies = TRUE) library (rtweet)
+install.packages("rtweet")
+library (rtweet)
 
 ###Creación del token para la aplicación que permite obtener tweets.
 
-create_token( app = "nome_do_app_twetter", consumer_key = "consumer_key", consumer_secret = "consumer_secret")
+APP_NAME <-  "xxxxxx"
+API_KEY <-  "xxxxxx"
+API_SECRET_KEY <-  "xxxx"
+ACCES_TOKEN <- "xxxxxxxx"
+ACCESS_TOKEN_SECRET <-  "xxxxxxx"
+twitter_token <- create_token(app = APP_NAME,consumer_key = API_KEY, consumer_secret = API_SECRET_KEY, access_token = ACCES_TOKEN, access_secret = ACCESS_TOKEN_SECRET)
 
 ###Búsqueda de tweets (parámetros: palabra clave, número de tweets a descargar, volver a buscar al alcanzar el límite de tweets, tipo de búsqueda, inclusión de retweets e idioma de los tweets).
 
